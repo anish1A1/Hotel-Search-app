@@ -3,6 +3,9 @@ from .models import *
 from django.http import JsonResponse
 
 
+def home(request):
+    return render(request,'home.html')
+
 def get_hotel(request):
     try:
         hotel_obj = Hotel.objects.all()
