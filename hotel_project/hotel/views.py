@@ -4,7 +4,8 @@ from django.http import JsonResponse
 
 
 def home(request):
-    return render(request,'home.html')
+    context = {"amenities":Amenities.objects.all()}
+    return render(request,'home.html', context)
 
 def get_hotel(request):
     try:
